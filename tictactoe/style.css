@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    background-color:#3DC2EC;
+    margin: 0px;
+    
+}
+
+.wrapper{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.left{
+    padding-right: 75px;
+}
+
+
+.title p{
+    color:#1414ba;
+    font-family: "Special Elite";
+    display: inline-block;
+    border-right: 2px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(31),
+        cursor .4s step-end infinite alternate ;
+}
+
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes cursor {
+    from, to { border-color: transparent }
+    50% { border-color: #281d4c; }
+}
+
+.restart{
+    margin-top: 20;
+    padding: 5%;
+    height: 50px;
+    width: 150px;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px #281d4c solid ;
+    border-radius: 50px;
+    font-weight: 500 ;
+}
+
+
+.restart:hover{
+    background-color: #4b4bf5;
+    color: white;
+}
+
+.header{
+    display: flex;
+    font-size: larger;
+    color:white
+}
+
+.header .player-x{
+    flex: 1;
+    border-bottom: 5px solid rgb(20, 58, 172);
+    padding: 10px;
+}
+
+.header .player-o{
+    flex: 1;
+    border-bottom: 5px solid rgb(20, 58, 172);
+    padding: 10px;
+
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 5px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b4bf5;
+    color: white;
+    font-size: 50px;
+    border-radius: 25px;
+}
+
+.tile:hover{
+    opacity: 50%;
+
+}
